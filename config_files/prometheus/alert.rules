@@ -1,0 +1,11 @@
+groups:
+- name: airflow_alerts
+  rules:
+  - alert: AirflowDagFailed
+    expr: sum by (dag_id) (af_agg_dagrun_duration_failed) > 0
+    for: 1m
+    labels:
+      severity: critical
+    annotations:
+      summary: "Airflow DAG failed (instance {{ $labels.instance }})"
+      description: "The Airflow DAG '{{ $labels.dag_id }}' has failed."
