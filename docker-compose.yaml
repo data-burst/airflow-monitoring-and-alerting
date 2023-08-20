@@ -318,7 +318,7 @@ services:
     ports:
       - 9093:9093
     volumes:
-      - ./config.yaml:/etc/alertmanager/config.yaml
+      - ./config_files/alertmanager/config.yaml:/etc/alertmanager/config.yaml
     command:
       - '--config.file=/etc/alertmanager/config.yaml'
       - '--storage.path=/alertmanager'
