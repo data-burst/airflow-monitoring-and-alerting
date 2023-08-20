@@ -312,6 +312,17 @@ services:
     volumes:
       - grafana_data:/var/lib/grafana
 
+  alertmanager:
+    container_name: alertmanager
+    image: prom/alertmanager:v0.25.0
+    ports:
+      - 9093:9093
+    volumes:
+      - ./config.yaml:/etc/alertmanager/config.yaml
+    command:
+      - '--config.file=/etc/alertmanager/config.yaml'
+      - '--storage.path=/alertmanager'
+
 volumes:
   postgres-db-volume:
   prometheus_data:
