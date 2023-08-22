@@ -323,6 +323,22 @@ services:
       - '--config.file=/etc/alertmanager/config.yaml'
       - '--storage.path=/alertmanager'
 
+  node-exporter:
+    image: prom/node-exporter:v1.6.1
+    volumes:
+      - /proc:/host/proc:ro
+      - /sys:/host/sys:ro
+      - /:/rootfs:ro
+      - /:/host
+    command: 
+      - '--path.rootfs=/host'
+      - '--path.procfs=/host/proc' 
+      - '--path.sysfs=/host/sys'
+      - --collector.filesystem.ignored-mount-points
+      - "^/(sys|proc|dev|host|etc|rootfs/var/lib/docker/containers|rootfs/var/lib/docker/overlay2|rootfs/run/docker/netns|rootfs/var/lib/docker/aufs)($$|/)"
+    ports:
+      - 9100:9100
+
 volumes:
   postgres-db-volume:
   prometheus_data:
