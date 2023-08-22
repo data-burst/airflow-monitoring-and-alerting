@@ -7,6 +7,7 @@ global:
 # Load and evaluate rules in this file every 'evaluation_interval' seconds.
 rule_files:
   - 'alert.rules'
+  - 'node.rules'
 
 # alert
 alerting:
@@ -31,4 +32,10 @@ scrape_configs:
     scrape_interval: 15s
     static_configs:
       - targets: ['statsd-exporter:9102']
+
+  - job_name: 'node-exporter'
+    scrape_interval: 15s
+    static_configs:
+      - targets:
+        - 'node-exporter:9100'
 
