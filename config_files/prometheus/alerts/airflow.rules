@@ -9,3 +9,12 @@ groups:
     annotations:
       summary: "Airflow DAG failed (instance {{ $labels.instance }})"
       description: "The Airflow DAG '{{ $labels.dag_id }}' has failed."
+
+  - alert: AirflowTaskFailure
+    expr: airflow_task_failure_count > 0
+    for: 5m
+    labels:
+      severity: critical
+    annotations:
+      summary: "Airflow task failed: {{ $labels.task_name }}"
+      description: "Task '{{ $labels.task_name }}' in DAG '{{ $labels.dag_id }}' failed."
