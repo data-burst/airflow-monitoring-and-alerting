@@ -3,3 +3,5 @@ plugins
 config
 dags
 
+# MacOS
+.DS_Store
