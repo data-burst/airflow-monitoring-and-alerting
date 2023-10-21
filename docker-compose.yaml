@@ -312,6 +312,10 @@ services:
       - 3000:3000
     volumes:
       - grafana_data:/var/lib/grafana
+      - ./config_files/grafana/etc/grafana/provisioning/dashboards/:/etc/grafana/provisioning/dashboards/
+      - ./config_files/grafana/etc/grafana/provisioning/datasources/:/etc/grafana/provisioning/datasources/
+      - ./config_files/grafana/var/lib/grafana/dashboards/:/var/lib/grafana/dashboards/
+      - ./config_files/grafana/var/lib/grafana/plugins/:/var/lib/grafana/plugins/
 
   alertmanager:
     container_name: alertmanager
