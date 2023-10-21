@@ -8,4 +8,5 @@ route:
 receivers:
 - name: discord
   discord_configs:
-  - webhook_url: <your_discord_webhook>  # TODO:// add to the documentation 
+  - webhook_url: <your_discord_webhook>
+
