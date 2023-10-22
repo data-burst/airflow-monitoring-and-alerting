@@ -32,6 +32,15 @@ In addition to this, Alertmanager is incorporated into the stack to group alerts
 
 ## Project Usage 🧑‍💻
 
+**Important Tip**:
+
+Before you can use the project, based on [Airflow's documentation](https://airflow.apache.org/docs/apache-airflow/stable/howto/docker-compose/index.html#setting-the-right-airflow-user), you need to ensure that Airflow has the correct permissions for the required directories. To do this, execute the following commands in the directory where your `docker-compose.yaml` file is located:
+
+```bash
+mkdir -p ./dags ./logs ./plugins ./config
+echo -e "AIRFLOW_UID=$(id -u)" > .env
+```
+
 Deploying the project is straightforward:
 
 1. **Clone the Repository**: Use git clone  to clone the repository onto your local machine.
