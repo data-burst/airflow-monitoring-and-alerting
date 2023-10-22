@@ -26,7 +26,7 @@
 
 This project offers a robust monitoring stack for Apache Airflow, encapsulated within Docker. It harnesses the capabilities of Prometheus, Grafana, StatsD, and Alertmanager to deliver real-time monitoring and visualization of your Airflow workflows.
 
-The stack is designed for easy deployment and configuration. Grafana dashboards are automatically provisioned, enabling immediate visualization of key metrics from your Airflow instance. The project supports the addition of new dashboards by simply adding the corresponding JSON file to the config_files/grafana/var/lib/grafana/dashboards directory.
+The stack is designed for easy deployment and configuration. Grafana dashboards are automatically provisioned, enabling immediate visualization of key metrics from your Airflow instance. The project supports the addition of new dashboards by simply adding the corresponding JSON file to the `config_files/grafana/var/lib/grafana/dashboards` directory.
 
 In addition to this, Alertmanager is incorporated into the stack to group alerts and send notifications to a Discord channel using a webhook token. This ensures you are always informed about the status of your workflows and can respond promptly to any issues.
 
