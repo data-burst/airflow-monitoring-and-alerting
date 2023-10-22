@@ -4,3 +4,5 @@ config
 dags
 .env
 
+# MacOS
+.DS_Store
