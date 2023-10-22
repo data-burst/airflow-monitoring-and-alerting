@@ -2,4 +2,5 @@ logs
 plugins
 config
 dags
+.env
 
