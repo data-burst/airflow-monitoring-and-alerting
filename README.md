@@ -100,8 +100,8 @@ By following these steps, you will integrate the monitoring stack from the `airf
 
 ## Contributing 👥
 
-We welcome contributions to this repository! If you’re interested in contributing, please take a look at our [CONTIRIBUTION.md](https://github.com/data-burst/airflow-monitoring-and-alerting/blob/master/CONTRIBUTING.md) file for more information on how to get started. We look forward to collaborating with you!
+We welcome contributions to this repository! If you’re interested in contributing, please take a look at our [CONTIRIBUTION.md](./CONTRIBUTING.md) file for more information on how to get started. We look forward to collaborating with you!
 
 ## License 📄
 
-This repository is licensed under the MIT License, which is a permissive open-source license that allows for reuse and modification of the code with few restrictions. You can find the full text of the license in [this](https://github.com/data-burst/airflow-monitoring-and-alerting/license) file.
+This repository is licensed under the MIT License, which is a permissive open-source license that allows for reuse and modification of the code with few restrictions. You can find the full text of the license in [this](./LICENSE) file.
