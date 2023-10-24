@@ -66,7 +66,7 @@ Deploying the project is straightforward:
 
 To integrate the monitoring stack for Apache Airflow into an existing setup with Airflow and Prometheus, follow these instructions:
 
-1. **Install the required components**: Make sure you have Airflow and Prometheus ans Grafana installed and configured in your environment.
+1. **Install the required components**: Make sure you have Airflow and Prometheus and Grafana installed and configured in your environment.
 
 2. **Mapping the configuration files**: Copy the contents of the `config_files/statsd/statsd.yaml` file from the monitoring project repository into your own Statsd configuration directory.
 
@@ -77,9 +77,8 @@ To integrate the monitoring stack for Apache Airflow into an existing setup with
    AIRFLOW__METRICS__STATSD_HOST: "statsd-exporter"
    AIRFLOW__METRICS__STATSD_PORT: "9125"
    AIRFLOW__METRICS__STATSD_PREFIX: "airflow"
-
-   Adjust the values based on your specific configuration.
    ```
+    🔍️ Adjust the values based on your specific configuration.
 
 4. **Configure Prometheus**: In your Prometheus configuration file (prometheus.yml), add the scrape configuration for the StatsD exporter:
 
@@ -89,12 +88,12 @@ To integrate the monitoring stack for Apache Airflow into an existing setup with
       static_configs:
         - targets:
           - 'statsd-exporter:9102'
-
-    Save the file after making the changes.
     ```
+    🔍️ Save the file after making the changes.
 
-5. **Copy Grafana Dashboard JSON file**: From the `airflow-monitoring-and-alerting` repository, navigate to the config_files/grafana/var/lib/grafana/dashboards directory. Copy the JSON files of the desired dashboards you want to add to your Grafana instance.
-*Note: The specific directory path may vary depending on your Grafana setup.*
+5. **Copy Grafana Dashboard JSON file**: From the `airflow-monitoring-and-alerting` repository, navigate to the `config_files/grafana/var/lib/grafana/dashboards` directory. Copy the JSON files of the desired dashboards you want to add to your Grafana instance.
+
+💬 *Note: The specific directory path may vary depending on your Grafana setup.*
 
 By following these steps, you will integrate the monitoring stack from the `airflow-monitoring-and-alerting` repository into your existing Airflow and Prometheus setup. Make sure to adjust the configurations and paths according to your environment.
 
