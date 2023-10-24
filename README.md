@@ -49,7 +49,7 @@ Deploying the project is straightforward:
     git clone https://github.com/data-burst/airflow_monitoring_and_alerting.git
     ```
 
-2. Add your Discord webhook token to `config_files/alertmanager/config.yaml` file and replace it with `<your_discord_webhook>`.
+2. Configure your Alertmanager by adding your Discord or Slack webhook token to the config_files/alertmanager/config.yaml file. Replace `<your_discord_webhook>` for Discord and `<your_slack_webhook>` for Slack. Additionally, update `<#your_slack_channel_name>` with your Slack channel name, for example, `#my_channel_name`."
 
 3. **Start the Services**: Navigate to the project directory and use the following command to initiate all services in detached mode.
 
