@@ -29,7 +29,7 @@ This project offers a robust monitoring stack for Apache Airflow, encapsulated w
 
 The stack is designed for easy deployment and configuration. Grafana dashboards are automatically provisioned, enabling immediate visualization of key metrics from your Airflow instance. The project supports the addition of new dashboards by simply adding the corresponding JSON file to the `config_files/grafana/var/lib/grafana/dashboards` directory.
 
-In addition to this, Alertmanager is incorporated into the stack to group alerts and send notifications to a Discord channel using a webhook token. This ensures you are always informed about the status of your workflows and can respond promptly to any issues.
+In addition to this, Alertmanager is incorporated into the stack to group alerts and send notifications to a Discord or Slack channel using a webhook token. This ensures you are always informed about the status of your workflows and can respond promptly to any issues.
 
 ## Project Usage 🧑‍💻
 
@@ -50,7 +50,7 @@ Deploying the project is straightforward:
     git clone https://github.com/data-burst/airflow-monitoring-and-alerting.git
     ```
 
-2. Add your Discord webhook token to `config_files/alertmanager/config.yaml` file and replace it with `<your_discord_webhook>`.
+2. Configure your Alertmanager by adding your Discord or Slack webhook token to the config_files/alertmanager/config.yaml file. Replace `<your_discord_webhook>` for Discord and `<your_slack_webhook>` for Slack. Additionally, update `<#your_slack_channel_name>` with your Slack channel name, for example, `#my_channel_name`."
 
 3. **Start the Services**: Navigate to the project directory and use the following command to initiate all services in detached mode.
 
