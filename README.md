@@ -19,7 +19,7 @@
   - [Table of Contents 🏗️](#table-of-contents-️)
   - [Project Description 🌱](#project-description-)
   - [Project Usage 🧑‍💻](#project-usage-)
-  - [Integration Steps for Airflow Monitoring Stack in Existing Setup :speech\_balloon:](#integration-steps-for-airflow-monitoring-stack-in-existing-setup-speech_balloon)
+  - [Integration Steps for Airflow Monitoring Stack in Existing Setup 💬](#integration-steps-for-airflow-monitoring-stack-in-existing-setup-)
   - [Add statsd-exporter configuration to Helm values ☸️](#add-statsd-exporter-configuration-to-helm-values-️)
   - [Contributing 👥](#contributing-)
   - [License 📄](#license-)
@@ -63,7 +63,7 @@ Deploying the project is straightforward:
 
 4. **Enjoy**: That’s it! Your Apache Airflow monitoring stack is now operational.
 
-## Integration Steps for Airflow Monitoring Stack in Existing Setup :speech_balloon:
+## Integration Steps for Airflow Monitoring Stack in Existing Setup 💬
 
 To integrate the monitoring stack for Apache Airflow into an existing setup with Airflow and Prometheus, follow these instructions:
 
@@ -102,7 +102,7 @@ By following these steps, you will integrate the monitoring stack from the `airf
 
 ## Add statsd-exporter configuration to Helm values ☸️
 
-If you are deploying the Airflow using [Airflow Helm chart](https://artifacthub.io/packages/helm/apache-airflow/airflow), you have to first enable stats statsd (`statsd.enabled: true`), and then add statsd-exporter configuration to your `extraMappings` list. Here is the configuration:
+If you are deploying the Airflow using [Airflow Helm chart](https://artifacthub.io/packages/helm/apache-airflow/airflow), you have to first enable statsd (`statsd.enabled: true`), and then add statsd-exporter configuration to your `extraMappings` list. Here is the configuration:
 
 ```yaml
 statsd:
