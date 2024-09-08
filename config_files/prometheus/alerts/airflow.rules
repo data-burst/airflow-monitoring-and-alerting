@@ -2,7 +2,7 @@ groups:
 - name: airflow_alerts
   rules:
   - alert: AirflowDagFailed
-    expr: sum by (dag_id) (af_agg_dagrun_duration_failed) > 0
+    expr: sum by (dag_id, task_id) (increase(af_agg_ti_finish{state="failed"}[5m])) > 0
     for: 1m
     labels:
       severity: critical
